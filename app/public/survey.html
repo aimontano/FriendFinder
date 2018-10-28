@@ -67,7 +67,7 @@
                         <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-<!--                 <div class="required field">
+                <div class="required field">
                     <label>Question 4: All students should be required to study art and music in secondary school.</label>
                     <select id="q4" class="ui search dropdown">
                         <option value="">Select an option</option>
@@ -143,14 +143,14 @@
                         <option value="4">4</option>
                         <option value="5">5 (Strongly Agree)</option>
                     </select>
-                </div> -->
+                </div>
                 <button class="ui fluid large primary button" id="btnSubmit">Submit</button>
             </form>
         </div>
         <div class="ui padded basic segment breadcrumb">
-            <a href="/" class="section">API Friends List</a>
+            <a href="/api/friends" class="section">API Friends List</a>
             <div class="divider">|</div>
-            <a href="/" class="section">Github Repo</a>
+            <a href="https://github.com/aimontano/FriendFinder" class="section">Github Repo</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -191,7 +191,15 @@
                   scores: scores
                 }
 
-                console.log(user);
+                // console.log(user);
+                $.post('/api/friends', user)
+                    .then((response) => {
+                    		/*
+												NOTE: This is where you should handle the response given back from the server
+												the response will be the best match for this user. If no match found notify user
+                    		*/
+                        console.log(response);
+                    });
             }
             else {// display message
                 $('#boxMessage').removeClass('hidden');
