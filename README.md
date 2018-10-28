@@ -3,6 +3,7 @@ This small program allows users to answer a questionnaire and based on the answe
 
 ### Technologies used:
 - Semantic UI
-- JavaScript
+- JavaScript 
+- JQuery
 - NodeJS 
 - Express
