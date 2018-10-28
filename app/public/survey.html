@@ -147,6 +147,18 @@
                 <button class="ui fluid large primary button" id="btnSubmit">Submit</button>
             </form>
         </div>
+        <div class="ui mini modal">
+        	<i class="close icon"></i>
+        	<div class="ui header">
+        		<span>Best Match</span>
+        	</div>
+        	<div class="image content">
+        		<div class="ui medium image">
+        			<h3 class="ui header" id="matchName">Potato</h3>
+        			<img src="#"  id="matchImg">
+        		</div>
+        	</div>
+        </div>
         <div class="ui padded basic segment breadcrumb">
             <a href="/api/friends" class="section">API Friends List</a>
             <div class="divider">|</div>
@@ -160,6 +172,9 @@
         $('.message .close').on('click', function() {
             $(this).closest('.message').transition('fade');
         });
+
+        // $('.mini.modal').modal('show');
+
         $(document).on('click', '#btnSubmit', e => {
             e.preventDefault();
 
@@ -198,7 +213,18 @@
 												NOTE: This is where you should handle the response given back from the server
 												the response will be the best match for this user. If no match found notify user
                     		*/
-                        console.log(response);
+                    		let $matchName = $('#matchName');
+                    		let $matchImg = $('#matchImg');
+                    		console.log(response);
+                        if(response == null) {
+                        	$matchName.text('No Matches Found!!');
+                        	$matchImg.attr('src', 'https://2static.fjcdn.com/pictures/Sorry+not+sorry+sorry+if+this+bothers+people+but+its_7b1b9c_5696830.jpg');
+                        	$('.mini.modal').modal('show');
+                        } else {
+                        	$matchName.text(response.name);
+                        	$matchImg.attr('src', response.photo);
+                        	$('.mini.modal').modal('show');
+                        }
                     });
             }
             else {// display message

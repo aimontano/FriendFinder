@@ -10,7 +10,7 @@ let myAnswers = [2,3,1,1,1,3,1,3,5,1];
 
 // this functions retuns the best mast obj 0-10
 const getBestMatch = arr => {
-	let bestMatch = null; // stores best match friend obj
+	let bestMatch; // stores best match friend obj
 	for(let i=arr.length; i >= 0; i-- ) { // loops through the last item added to top
 		arr[i] = parseInt(arr[i]);
 		if(arr[i] <= 10) {
@@ -18,6 +18,7 @@ const getBestMatch = arr => {
 			break;
 		}
 	}
+	console.log(bestMatch);
 	return bestMatch; // return best match obj
 }
 
@@ -30,6 +31,8 @@ const getMatch = scores => {
 	const getMatchDiff = arr => {
 		let totalDiff = 0;
 		for(let i = 0; i < arr.length; i++) {
+			scores[i] = parseInt(scores[i]);
+			arr[i] = parseInt(arr[i]);
 			totalDiff += Math.abs(scores[i] - arr[i]);
 		}
 		return totalDiff;
@@ -39,7 +42,7 @@ const getMatch = scores => {
 	friends.forEach(object =>{
 		match.push(getMatchDiff(object.scores));
 	});
-
+	console.log(match);
 	return match;
 }
 
@@ -53,7 +56,7 @@ module.exports = app => {
 
 		let bestMatch = getBestMatch(getMatch(newFriend.scores));
 
-		if(bestMatch === null){
+		if(bestMatch === undefined){
 			res.json(null);
 		} else {
 			res.json(bestMatch);
