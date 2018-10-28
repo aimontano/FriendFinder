@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+</head>
+<body>
+    <div class="ui container">
+        <div class="ui basic segment">
+            <h1 class="ui dividing header">Survey Questions</h1>
+            <!-- Show error message -->
+            <div class="ui hidden error message" id="boxMessage">
+              <i class="close icon"></i>
+              <div class="header">
+                There were some errors with your submission
+              </div>
+              <ul class="list">
+                <li>You must enter your name and have an image link</li>
+                <li>You must answer all question</li>
+              </ul>
+            </div>
+            <form class="ui large form">
+                <h3>About You</h3>
+                <div class="two fields">
+                    <div class="required field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="required field">
+                        <label for="img">Image Link</label>
+                        <input type="text" id="img">
+                    </div>
+                </div>
+                <div class="required field">
+                    <label>Question 1: People are never satisfied with what they have; they always want something more or something different.</label>
+                    <select id="q1" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 2: People should read only those books that are about real events, real people, and established facts.</label>
+                    <select id="q2" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 3: It is more important for students to study history and literature than it is for them to study science and mathematics. </label>
+                    <select id="q3" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 4: All students should be required to study art and music in secondary school.</label>
+                    <select id="q4" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 5: There is nothing that young people can teach older people.</label>
+                    <select id="q5" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 6: Reading fiction (such as novels and short stories) is more enjoyable than watching movies.</label>
+                    <select id="q6" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 7: Children should spend more time praciting sports</label>
+                    <select id="q7" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 8: Only people who earn a lot of money are successful.</label>
+                    <select id="q8" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 9: A person’s childhood years (the time from birth to twelve years of age) are the most important years of a person’s life.</label>
+                    <select id="q9" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="required field">
+                    <label>Question 10: Children should be required to help with household tasks as soon as they are able to do so. </label>
+                    <select id="q10" class="ui search dropdown">
+                        <option value="">Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <button class="ui fluid large primary button" id="btnSubmit">Submit</button>
+            </form>
+        </div>
+        <div class="ui padded basic segment breadcrumb">
+            <a href="/api/friends" class="section">API Friends List</a>
+            <div class="divider">|</div>
+            <a href="https://github.com/aimontano/FriendFinder" class="section">Github Repo</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+        $('select.dropdown').dropdown();
+        $('.message .close').on('click', function() {
+            $(this).closest('.message').transition('fade');
+        });
+        $(document).on('click', '#btnSubmit', e => {
+            e.preventDefault();
+
+            let validForm = true;
+
+            let scores = []; // stores scores
+
+            // validate questions
+            $('select').each(function(){
+                if($(this).val() === '') {
+                    validForm = false;
+                }
+                else {
+                    // if all questions have been answered push them to array
+                    scores.push($(this).val());
+                }
+            });
+
+            // validate name and image link
+            if($('#name').val().trim() === '' || $('#img').val().trim() === '')
+                validForm = false;
+
+            // if form is good to go
+            if(validForm) {
+                // create user object
+                let user = {
+                  name: $('#name').val().trim(),
+                  photo: $('#img').val().trim(),
+                  scores: scores
+                }
+
+                // console.log(user);
+                $.post('/api/friends', user)
+                    .then((response) => {
+                    		/*
+												NOTE: This is where you should handle the response given back from the server
+												the response will be the best match for this user. If no match found notify user
+                    		*/
+                        console.log(response);
+                    });
+            }
+            else {// display message
+                $('#boxMessage').removeClass('hidden');
+                window.scroll({
+                 top: 0,
+                 left: 0,
+                 behavior: 'smooth'
+                });
+            }
+        })
+    </script>
+</body>
+</html>
